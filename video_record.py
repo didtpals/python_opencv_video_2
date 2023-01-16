@@ -10,7 +10,7 @@ face_cascade = cv2.CascadeClassifier('haarcascade_frontalface_default.xml')
 while True:
     
     ret, frame = capture.read()
-    img = cv2.flip(frame, 2)
+    img = cv2.flip(frame, 2) # x축 혹은 y축을 기준으로 이미지를 뒤집을 수 있고 둘 다 기준으로 이미지를 뒤집을 수 있음 2번째 인자 값에 따라 달라짐.
     cv2.imshow("VideoFrame", img)
 
     faces = face_cascade.detectMultiScale(    
